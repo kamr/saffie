@@ -2,7 +2,17 @@ var cube = document.getElementById('D3Cube');
 cube.addEventListener('click',function() {
   console.log("clicked the cube");
   cube.addEventListener('animationiteration', stopSpinning, false);
+  document.getElementById('pyrobox').classList.add('show');
+  document.getElementById("stevie").play();
 })
+window.onload = function() {
+    document.getElementById("my_audio").play();
+}
+
+function stopIntroSong() {
+  console.log("hi")
+  document.getElementById("my_audio").pause();
+}
 
 function stopSpinning() {
   console.log("open the box")
