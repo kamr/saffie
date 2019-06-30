@@ -6,6 +6,7 @@ cube.addEventListener('click',function() {
   document.getElementById("stevie").play();
 })
 window.onload = function() {
+    console.log('play music')
     document.getElementById("my_audio").play();
 }
 
