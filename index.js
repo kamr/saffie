@@ -1,0 +1,17 @@
+var cube = document.getElementById('D3Cube');
+cube.addEventListener('click',function() {
+  console.log("clicked the cube");
+  cube.addEventListener('animationiteration', stopSpinning, false);
+})
+
+function stopSpinning() {
+  console.log("open the box")
+  cube.classList.remove('spinBox');
+  cube.classList.add('openBox');
+  document.getElementById('side1').classList.add('openTop');
+  document.getElementById('side2').classList.add('openSide2');
+  document.getElementById('side3').classList.add('openSide3');
+  document.getElementById('side4').classList.add('openSide4');
+  document.getElementById('side5').classList.add('openSide5');
+  document.getElementById('laptop').classList.add('openLaptop');
+}

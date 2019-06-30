@@ -1,37 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<style>
-html {
-  scroll-behavior: smooth;
-}
-
-#section1 {
-  height: 600px;
-  background-color: pink;
-}
-
-#section2 {
-  height: 600px;
-  background-color: yellow;
-}
-</style>
+	<title>Happy Birthday Saffie!</title>
+	<link rel="stylesheet" type="text/css" href="./script/fullpage.min.css" />
+  <link rel="stylesheet" type="text/css" href="./index.css" />
+  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 
-<h1>Smooth Scroll</h1>
 
-<div class="main" id="section1">
-  <h2>Section 1</h2>
-  <p>Click on the link to see the "smooth" scrolling effect.</p>
-  <a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
-  <p>Note: Remove the scroll-behavior property to remove smooth scrolling.</p>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+    <div class="intro">
+      <div class="wrapper"></div>
+      <div class="introBox">
+        <div class="innerBox">
+    			<div><p class="title hbd">Happy Birthday</p></div>
+    			<p class="title saf">Saffie!</p>
+        </div>
+  		</div>
+      <a class="nextButton" href="#video"><i class="down"></i></a>
+    </div>
+	</div>
+	<div class="section" id="section1">
+    <div class="video">
+			<p class="title hbd-video">Happy Birthday!</p>
+			<div class="videoBox">
+        <video src="./video.mp4"  width="800" controls="false" data-autoplay></video>
+        <!-- poster="background.jpg" -->
+      </div>
+		</div>
+    <a class="nextButton" href="#present"><i class="down"></i></a>
+	</div>
+	<div class="section" id="section2">
+    <div class="present">
+			<p class="title hbd-video">Open your present!</p>
+      <div id="wrapD3Cube">
+      	<div id="D3Cube" class="spinCube">
+      		<div id="side1" class="side"></div>
+      		<div id="side2" class="side"></div>
+      		<div id="side3" class="side"></div>
+      		<div id="side4" class="side"></div>
+      		<div id="side5" class="side"></div>
+      		<div id="side6" class="side"></div>
+          <div id="laptop"></div>
+      	</div>
+      </div>
+      <p class="click-to-open">Click the present to open it!</p>
+		</div>
+    <a class="nextButton" href="#selection"><i class="down"></i></a>
+	</div>
+  <div class="section" id="section2">
+    <div class="selection">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1RQL4zLhaLLh1-h-uVIfgNLfWmGjTBGfPPi6gwqE0GlM7CA/viewform?embedded=true" width="640" height="750" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+  </div>
 </div>
 
-<div class="main" id="section2">
-  <h2>Section 2</h2>
-  <a href="#section1">Click Me to Smooth Scroll to Section 1 Above</a>
-</div>
+<script type="text/javascript" src="./index.js"></script>
+<script type="text/javascript" src="./script/fullpage.min.js"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['intro', 'video', 'present', 'selection'],
+        // sectionsColor: ['#FFF', '#FAA', '#7E8F7C']
+    });
+</script>
+
+<script type="text/javascript" src="./confetti.js"></script>
 
 </body>
 </html>
