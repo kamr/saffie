@@ -14,4 +14,12 @@ function stopSpinning() {
   document.getElementById('side4').classList.add('openSide4');
   document.getElementById('side5').classList.add('openSide5');
   document.getElementById('laptop').classList.add('openLaptop');
+  document.getElementById('laptop').addEventListener('animationend', changeText, false);
+}
+
+function changeText() {
+  console.log("end open animation");
+  document.getElementById('title-open').classList.add('animation-end');
+  document.getElementById('title-laptop').classList.add('animation-end');
+  document.getElementById('click-laptop').classList.add('animation-end');
 }

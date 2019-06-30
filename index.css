@@ -13,11 +13,6 @@
   color: #313131;
 }
 
-.click-to-open {
-  font-size: 30px;
-  color: #313131;
-}
-
 .saf {
   font-size: 40px;
 }
@@ -124,6 +119,38 @@ i {
   flex-direction: column;
   justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
+}
+
+/* OPEN */
+
+#title-open {
+  font-size: 45px;
+  margin-bottom: 35px;
+  color: #313131;
+}
+
+#title-open.animation-end {
+  display: none;
+}
+
+#title-laptop {
+  font-size: 45px;
+  margin-bottom: 35px;
+  color: #313131;
+  display: none;
+}
+
+#title-laptop.animation-end {
+  display: block;
+}
+
+#click-laptop {
+  font-size: 30px;
+  color: #313131;
+}
+
+#click-laptop.animation-end {
+  opacity: 0;
 }
 
 /* BOX */
